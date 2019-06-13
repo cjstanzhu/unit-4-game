@@ -31,17 +31,15 @@ $(document).ready(function() {
         var value = $(this).attr("data-crystalValue");
         value = parseInt(value);
 
-        console.log(value);
-
         totalScore += value;
 
         if (totalScore === targetNumber) {
-            alert("You won!");
+            alert("Congratulations, you won!");
             winCount++;
             $("#win-count").text("Wins: " + winCount);
             restartGame();
         } else if (totalScore > targetNumber) {
-            alert("You lost!");
+            alert("You lost, please try again.");
             loseCount++;
             $("#lose-count").text("Losses: " + loseCount);
             restartGame();
